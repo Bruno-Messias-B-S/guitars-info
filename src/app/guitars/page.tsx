@@ -16,7 +16,7 @@ export default function Guitars() {
   return (
     <>
       <C.Container>
-        <div>
+        <div className="container">
           <button
             onClick={() =>
               changeGuitar(
@@ -51,16 +51,22 @@ export default function Guitars() {
             Les Paul
           </button>
         </div>
+        <C.GuitarsContainer>
+          {guitar.map((item) => (
+            <>
+              <div className="container-all">
+                <div className="container-name-desc">
+                  <div className="guitar-name">{item.nome}</div>
+                  <div className="guitar-desc">{item.desc}</div>
+                </div>
+                <div className="container-img">
+                  <img src={item.img} />
+                </div>
+              </div>
+            </>
+          ))}
+        </C.GuitarsContainer>
       </C.Container>
-      <C.GuitarsContainer>
-        {guitar.map((item) => (
-          <>
-            <div>{item.nome}</div>
-            <div>{item.desc}</div>
-            <div>{item.img}</div>
-          </>
-        ))}
-      </C.GuitarsContainer>
     </>
   );
 }
