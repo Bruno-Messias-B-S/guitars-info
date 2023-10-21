@@ -1,5 +1,8 @@
-* {
-  background-color: black;
+body {
+  background-image: url("https://img.freepik.com/vetores-gratis/aquarela-fundo-de-pessego-claro_23-2150268724.jpg?w=826&t=st=1697893140~exp=1697893740~hmac=1af19bf3b6282ae0c4496046622286945c1337216defb78a2155dd4eb9631b18");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
   box-sizing: border-box;
   padding: 0;
   margin: 0;

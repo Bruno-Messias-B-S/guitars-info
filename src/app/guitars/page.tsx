@@ -8,9 +8,11 @@ import { GuitarNames } from "@/data/data";
 
 export default function Guitars() {
   const [guitar, setGuitar] = useState([{ nome: "", desc: "", img: "" }]);
+  const [visible, setVisible] = useState("none");
 
   const changeGuitar = (n1: string, d1: string, img1: string) => {
     setGuitar([{ nome: n1, desc: d1, img: img1 }]);
+    setVisible("flex");
   };
 
   return (
@@ -57,6 +59,7 @@ export default function Guitars() {
               <div className="container-all">
                 <div className="container-name-desc">
                   <div className="guitar-name">{item.nome}</div>
+                  <div style={{ display: visible }} className="line"></div>
                   <div className="guitar-desc">{item.desc}</div>
                 </div>
                 <div className="container-img">
