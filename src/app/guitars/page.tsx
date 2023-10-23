@@ -5,13 +5,16 @@ import * as C from "./styles";
 import { useState } from "react";
 
 import { GuitarNames } from "@/data/data";
+import { GuitarNamesTypes } from "@/types/GuitarNamesTypes";
 
 export default function Guitars() {
-  const [guitar, setGuitar] = useState([{ nome: "", desc: "", img: "" }]);
+  const [guitar, setGuitar] = useState<GuitarNamesTypes[]>([
+    { name: "", desc: "", img: "" },
+  ]);
   const [visible, setVisible] = useState("none");
 
   const changeGuitar = (n1: string, d1: string, img1: string) => {
-    setGuitar([{ nome: n1, desc: d1, img: img1 }]);
+    setGuitar([{ name: n1, desc: d1, img: img1 }]);
     setVisible("flex");
   };
 
@@ -53,12 +56,13 @@ export default function Guitars() {
             Les Paul
           </button>
         </div>
+        <div className="line-nav"></div>
         <C.GuitarsContainer>
           {guitar.map((item) => (
             <>
               <div className="container-all">
                 <div className="container-name-desc">
-                  <div className="guitar-name">{item.nome}</div>
+                  <div className="guitar-name">{item.name}</div>
                   <div style={{ display: visible }} className="line"></div>
                   <div className="guitar-desc">{item.desc}</div>
                 </div>

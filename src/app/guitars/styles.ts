@@ -7,19 +7,23 @@ export const Container = style.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba( 0, 0, 0, 0.7);
 
     .container {
         display: flex;
         justify-content:center;
         align-items: center;
         list-style-type: none;
-        background-color: rgba( 0, 0, 0, 0.7);
         gap: 20px;
-        border-bottom: 1px solid white;
         height:70px;
         width:600px;
-        clip-path: polygon(0 0, 100% 0, 90% 90%, 10% 90%);
+        border-top: 3px solid black;
+    }
+
+    .line-nav {
+        width: 500px;
+        height: 2px;
+        border-radius: 5px;
+        background-color: black;
     }
 
     button {
@@ -28,14 +32,14 @@ export const Container = style.div`
         padding: 7px 12px;
         border-radius: 5px;
         cursor: pointer;
-        color: white;
-        font-size: 15px;
+        color: black;
+        font-size: 16px;
         width:150px;
         transition: all ease-in-out 0.1s;
     }
 
     button:hover {
-        font-size: 17px;
+        font-size: 18px;
         color: blue;
     }
 `;
@@ -51,14 +55,16 @@ export const GuitarsContainer = style.div`
         display: flex;
         justify-content:center;
         align-items: center;
+        gap: 60px;
         
         .container-name-desc {
-            height: 90%;
+            margin-top: 80px;
+            height: 500px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            width: 100%;
+            width: 50%;
             gap: 20px;
             margin-bottom: 100px;
 
@@ -71,22 +77,22 @@ export const GuitarsContainer = style.div`
                 height: 2px;
                 margin-top:-15px;
                 margin-left: 15px;
-                background-color: white;
+                background-color: black;
                 border-radius: 5px;
             }
 
             .guitar-desc {
                 font-size: 17px;
                 line-height: 27px;
+                min-height:250px;
             }
         }
 
         .container-img {
-            transform: rotate(270deg);
             transition: all ease-in-out 0.5;
 
             img {
-                width: 500px;
+                width: 300px;
             }
         }
     }

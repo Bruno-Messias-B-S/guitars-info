@@ -23,6 +23,7 @@ export const Container = style.nav`
         padding: 7px 20px;
         border-radius: 5px;
         transition: all ease-in-out .3s;
+        font-size: 16px;
     }
 
     .li: hover {
